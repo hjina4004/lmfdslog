@@ -1,6 +1,6 @@
 <?php
 
-namespace lmfriends\lmfdslog;
+namespace Lmfriends\Lmfdslog;
 
 class Greeting
 {
