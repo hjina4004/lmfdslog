@@ -1,5 +1,5 @@
 # 설치
-composer.json에 다음과 항목을 추가하고 composer update
+composer.json에 다음과 같은 항목을 추가하고 composer update
 
 ```
 "require": {
