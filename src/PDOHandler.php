@@ -86,6 +86,12 @@ class PDOHandler extends AbstractProcessingHandler
       $record['context'] = array_merge($record['context'], $record['extra']);
     }
 
+    foreach ($record['context'] as $key => $value) {
+      $type = gettype($value);
+      if ($type == 'array' || $type == 'object')
+        $record['context'][$key] = json_encode($value, JSON_UNESCAPED_UNICODE);
+    }
+
     $content = $this->sqlRecord->filterContent(array_merge([
       'channel' => $record['channel'],
       'level' => $record['level'],
